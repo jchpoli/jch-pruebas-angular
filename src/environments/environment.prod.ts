@@ -11,4 +11,6 @@ export const environment = {
     appId: "1:1003315964274:web:950798f48813d6790495eb",
     measurementId: "G-Q3G6B9LJK1",
   },
+  sentry_dns:
+    "https://162f4100216347f3af6a20f7682b4183@o438817.ingest.sentry.io/5404243",
 };

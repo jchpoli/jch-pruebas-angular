@@ -3,14 +3,15 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { MaterialModule } from '../material/material.module';
+import { MaterialModule } from '@material/material.module';
 import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
+import { QuicklinkModule } from 'ngx-quicklink';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CartComponent } from './components/cart/cart.component';
-import { AdminGuard } from './guards/admin/admin.guard';
+import { FibonacciPipe } from './pipes/fibonacci/fibonacci.pipe';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { AdminGuard } from './guards/admin/admin.guard';
     HeaderComponent,
     FooterComponent,
     CartComponent,
+    FibonacciPipe,
   ],
   exports: [
     ExponentialPipe,
@@ -27,7 +29,14 @@ import { AdminGuard } from './guards/admin/admin.guard';
     HeaderComponent,
     FooterComponent,
     CartComponent,
+    FibonacciPipe,
   ],
-  imports: [CommonModule, RouterModule, MaterialModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    QuicklinkModule,
+  ],
 })
 export class SharedModule {}
